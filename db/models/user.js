@@ -37,7 +37,6 @@ module.exports = (sequelize) => {
     emailAddress: {
       type: Sequelize.STRING,
       allowNull: false,
-      unique: true,
       validate: {
         notNull: {
           msg: 'Please provide a value for "emailAddress"',
@@ -46,9 +45,10 @@ module.exports = (sequelize) => {
           msg: 'Please provide a value for "emailAddress"',
         },
         isEmail: {
-          msg: "Email address must be valid"
-        }
-      }
+          msg: 'Please provide a valid email address',
+        },
+      },
+      unique: { msg: 'Sorry, Email address is already in use.' }
     },
     password: {
       type: Sequelize.STRING,
@@ -61,7 +61,7 @@ module.exports = (sequelize) => {
           msg: 'Please provide a value for "password"',
         }
       }
-    }
+    },
     }, { sequelize });
     
     User.associate = (models) => {
