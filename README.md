@@ -7,7 +7,7 @@ We've supplied the following files for you to use:
 * The `seed` folder contains a starting set of data for your database in the form of a JSON file (`data.json`) and a collection of files (`context.js`, `database.js`, and `index.js`) that can be used to create your app's database and populate it with data (we'll explain how to do that below).
 * The `RESTAPI.postman_collection.json` file is a collection of Postman requests that you can use to test and explore your REST API.
 
-## Getting Started
+### Getting Started
 
 To get up and running with this project, run the following commands from the root of the folder that contains this README file.
 
